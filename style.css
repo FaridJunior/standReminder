@@ -1,0 +1,98 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root{
+  --color-primary: #111111;
+  --color-secondary: #202020;
+  --primary-background-color: #fff2f2;
+  --secondary-background-color: #fff;
+  --font-family: 'Cursive', 'Poppins', sans-serif;
+}
+
+body{
+  font-family: var(--font-family);
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #fff;
+    --color-secondary: #eee;
+    --primary-background-color: #111;
+    --secondary-background-color: #222;
+  }
+}
+
+.container{
+  background-color: var(--primary-background-color);
+  color: var(--color-primary);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+
+.centerContent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1{
+  color: var(--color-secondary);
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+/* Cool button style */
+.button{
+  background-color: var(--secondary-background-color);
+  color: var(--color-secondary);
+  padding: 1rem 2rem;
+  /* border: none; */
+  border-radius: 5px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover{
+  background-color: var(--color-secondary);
+  color: var(--secondary-background-color);
+}
+
+
+.status{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: gray;
+  top: 20px;
+  left: 20px;
+}
+
+
+.numberOfCompletedSessions{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+}
+
+
