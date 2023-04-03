@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
   const UI = {
+    document: document,
     startButton: document.querySelector("#start"),
     stopButton: document.querySelector("#stop"),
     status: document.querySelector("#status"),
@@ -40,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function handleTimeUpdate(e){
     updateScreenTime(e.detail.time);
+    UI.document.title = msToTime(e.detail.time);
   }
 
   function handleSessionEnded() {
